@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Student Placement Prediction</title>
+        <style>
+body {
+  background-image: url('https://t3.ftcdn.net/jpg/04/29/00/62/360_F_429006205_lZ5vMh2Sl5E2xiGGMOt4iYUO03vdt34V.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
+
+
+form {
+
+text-align:center
+
+}
+
+input{
+width: 50%;
+border-radius:25px;
+height: 35px;
+}
+
+input[type=submit] {
+  background-color: green;
+  color: white;
+  width: 10%
+
+}
+
+select {
+width: 50%;
+border-radius:25px;
+height: 35px;
+}
+label {
+  font-size: 20px;
+
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}​
+
+
+</style>
+
+    </head>
+    <center><body>
+
+        <h1>Student Placement Prediction:{{results}}</h1>
+  
+    <form action="{{url_for('predict')}}" method="post">
+        <label for = "gender">Select Gender</label>
+        <select id="gender" name="gender">
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+        </select>
+     <br></br>
+
+<label for = "ssc_per">Enter 10th % Marks</label>
+<input type = 'text' class="type-1"  id = 'ssc_per', name = 'ssc_per', required = 'required', placeholder = "Enter your 10th Marks..." />
+<br></br>
+
+
+
+<label for = "hsc_per">Enter 12th % Marks</label>
+<input type = 'text' id = 'hsc_per', name = 'hsc_per', required = 'required', placeholder = "Enter your 12th Marks..." />
+<br></br>
+
+
+<label for = "degree_stream">Select Degree stream</label>
+<select id="degree_stream" name="degree_stream">
+      <option value="1">Others</option>
+      <option value="2">Sci & Tech</option>
+      <option value="0">Comm & Mgmt</option>
+</select>
+
+<br></br>
+
+
+<label for = "degree_per">Enter Degree %</label>
+<input type = 'text' id = 'degree_per', name = 'degree_per', required = 'required', placeholder = 'Enter your Degree percentage...' />
+
+<br></br>
+
+
+
+<label for = "wrk_exp">Select Work Experience</label>
+<select id="wrk_exp" name="wrk_exp">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+</select>
+
+
+<br></br>
+
+<label for = "spec">Select Specialization</label>
+<select id="spec" name="spec">
+      <option value="1">Marketing & HR</option>
+      <option value="0">Marketing & Finance</option>
+</select>
+
+
+<br></br>
+
+<label for = "mba">Enter MBA %</label>
+<input type = 'text' id = 'mba', name = 'mba', required = 'required', placeholder = 'Enter your MBA percentage...' />
+
+<br></br>
+
+<label></label>
+<input id="submit" type="submit" value="Predict" ></input>
+
+</form>
+</center>
+</body>
+
+</html>
+   
