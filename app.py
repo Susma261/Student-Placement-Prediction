@@ -4,7 +4,7 @@ import pandas as pd
 import pickle
 import jsonify
 
-app = Flask(__name__,static_url_path='/static')
+app = Flask(__name__)
 model = pickle.load(open('log_reg.pkl','rb'))
 @app.route('/')
 def Home():
