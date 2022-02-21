@@ -1,1 +1,1 @@
-# Campus-Placement-Analysis
+# Student-Placement-Prediction
